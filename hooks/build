@@ -2,13 +2,10 @@
 
 set -e
 
-STABLE=8.8
-DEV=8.9
-
 if [ $DOCKER_TAG == "stable" ]; then
-    HTCONDOR_VERSION=STABLE
+    HTCONDOR_VERSION=$STABLE
 elif [ $DOCKER_TAG == "dev" ]; then
-    HTCONDOR_VERSION=DEV
+    HTCONDOR_VERSION=$DEV
 else
     HTCONDOR_VERSION=$DOCKER_TAG
 fi
