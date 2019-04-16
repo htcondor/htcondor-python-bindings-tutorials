@@ -32,7 +32,6 @@ RUN pip install --no-cache-dir htcondor==${HTCONDOR_VERSION}
 
 COPY /tutorials ${HOME}
 COPY docker/entrypoint.sh /entrypoint.sh
-USER root
 RUN chown -R ${NB_UID} ${HOME}
 
 USER ${NB_USER}

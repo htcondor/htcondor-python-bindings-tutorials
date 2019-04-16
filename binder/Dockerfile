@@ -13,10 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ARG HTCONDOR_VERSION=8.8
-FROM maventree/htcondor-python-bindings-tutorials:${HTCONDOR_VERSION}
-
-COPY . ${HOME}
-USER root
-RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER}
+FROM maventree/htcondor-python-bindings-tutorials:8.8
