@@ -1,0 +1,18 @@
+dist: xenial
+sudo: required
+services:
+  - docker
+
+language: python
+env:
+  - HTCONDOR_VERSION=8.8
+  - HTCONDOR_VERSION=8.9
+
+install:
+  - docker build -t maventree/htcondor-python-bindings-tutorials:${HTCONDOR_VERSION} --file docker/Dockerfile --build-arg HTCONDOR_VERSION .
+
+script:
+  - docker run maventree/htcondor-python-bindings-tutorials:${HTCONDOR_VERSION} bash -e -c "condor_q && condor_status"
+  
+after_success:
+  - echo "after success"
