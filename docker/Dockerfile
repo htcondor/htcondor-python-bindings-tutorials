@@ -28,12 +28,13 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 COPY docker/condor_config.local /etc/condor/condor_config.local
-RUN pip install --no-cache-dir htcondor==${HTCONDOR_VERSION}
-
+COPY docker/entrypoint.sh ${HOME}/.entrypoint.sh
 COPY /tutorials ${HOME}/tutorials
-COPY docker/entrypoint.sh /entrypoint.sh
-RUN chown -R ${NB_UID} ${HOME}
+RUN pip install --no-cache-dir htcondor==${HTCONDOR_VERSION} \
+ && chmod +x ${HOME}/.entrypoint.sh
+WORKDIR ${HOME}/tutorials
 
+RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/home/jovyan/.entrypoint.sh"]
