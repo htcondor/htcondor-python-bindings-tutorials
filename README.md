@@ -29,7 +29,7 @@ After Docker pulls the image and starts it, you should see something like
         http://(sdfa0sjgk01k or 127.0.0.1):8888/?token=sidfj12312ejr01039ir4029f0qr34i0284utfr9ja909fi2
 ```
 Paste one URL options into your web browser and you'll be in a Jupyter Lab.
-Use the file browser to open `tutorials/index.ipynb`.
+Use the file browser to open `index.ipynb`.
 
 ### Run in a Docker Container (From a Local Repository)
 
