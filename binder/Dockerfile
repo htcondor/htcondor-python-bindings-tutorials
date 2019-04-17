@@ -13,4 +13,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM maventree/htcondor-python-bindings-tutorials:stable
+FROM jupyter/minimal-notebook:7d427e7a4dde
+ARG HTCONDOR_VERSION=8.8
+
+USER root
+
+RUN apt-get update \
+ && apt-get -y install --no-install-recommends gnupg git  \
+ && wget -qO - https://research.cs.wisc.edu/htcondor/ubuntu/HTCondor-Release.gpg.key | apt-key add - \
+ && echo "deb  http://research.cs.wisc.edu/htcondor/ubuntu/${HTCONDOR_VERSION}/bionic bionic contrib" >> /etc/apt/sources.list \
+ && apt-get -y update \
+ && apt-get -y install htcondor \
+ && apt-get -y clean \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY binder/condor_config.local /etc/condor/condor_config.local
+COPY binder/entrypoint.sh ${HOME}/.entrypoint.sh
+COPY /tutorials ${HOME}/tutorials
+RUN pip install --no-cache-dir htcondor==${HTCONDOR_VERSION} \
+ && chmod +x ${HOME}/.entrypoint.sh \
+ && chown -R ${NB_UID} ${HOME}
+
+USER ${NB_USER}
+WORKDIR ${HOME}/tutorials
+ENTRYPOINT ["/home/jovyan/.entrypoint.sh"]
