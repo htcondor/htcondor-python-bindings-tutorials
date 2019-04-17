@@ -14,6 +14,26 @@ If Binder isn't working, there are two (worse) ways to get the tutorials.
 
 ### Run in a Docker Container
 
+You can run the same Docker container used by Binder locally by running
+```bash
+docker run --rm maventree/htcondor-python-bindings-tutorials:stable
+```
+Replace `stable` with `dev` if you want the development series release.
+After Docker pulls the image and starts it, you should see something like
+```
+[C 18:06:44.844 LabApp]
+
+    To access the notebook, open this file in a browser:
+        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-1-open.html
+    Or copy and paste one of these URLs:
+        http://(sdfa0sjgk01k or 127.0.0.1):8888/?token=sidfj12312ejr01039ir4029f0qr34i0284utfr9ja909fi2
+```
+
+Paste one URL options into your web browser and you'll be in a Jupyter Lab.
+Use the file browser to open `tutorials/index.ipynb`.
+
+### Run in a Docker Container (From a Local Repository)
+
 The Docker container that runs on Binder is defined by `docker/Dockerfile`.
 You can run this container locally.
 
