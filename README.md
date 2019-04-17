@@ -5,10 +5,8 @@ This repository contains various tutorials on using the HTCondor Python Bindings
 The easiest way to get started is to launch the tutorials via Binder: 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoshKarpel/htcondor-python-bindings-tutorials/stable?urlpath=lab/tree/tutorials/index.ipynb)
 
-This version of the tutorials is based on the **stable** series release of HTCondor, currently `8.8.x`.
-If you want the tutorials based on the **development** series (`8.9.x`), 
-[click here](https://github.com/JoshKarpel/htcondor-python-bindings-tutorials/dev)
-or [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoshKarpel/htcondor-python-bindings-tutorials/dev?urlpath=lab/tree/tutorials/index.ipynb).
+The Binder link above is for the version of the tutorials based on the **stable** series release of HTCondor, currently `8.8.x`.
+If you want the tutorials based on the **development** series (`8.9.x`), use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoshKarpel/htcondor-python-bindings-tutorials/dev?urlpath=lab/tree/tutorials/index.ipynb).
 
 ## Other Ways to Access the Tutorials
 
