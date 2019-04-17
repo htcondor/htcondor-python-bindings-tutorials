@@ -13,4 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM maventree/htcondor-python-bindings-tutorials:8.8
+FROM maventree/htcondor-python-bindings-tutorials:stable
