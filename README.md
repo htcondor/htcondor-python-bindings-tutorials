@@ -1,4 +1,4 @@
-# htcondor-python-bindings-tutorials
+# HTCondor Python Bindings Tutorials
 
 This repository contains various tutorials on using the HTCondor Python Bindings.
 
