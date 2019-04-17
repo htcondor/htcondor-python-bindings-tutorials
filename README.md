@@ -16,7 +16,7 @@ If Binder isn't working, there are two (worse) ways to get the tutorials.
 
 You can run the same Docker container used by Binder locally by running
 ```bash
-docker run --rm maventree/htcondor-python-bindings-tutorials:stable
+docker run --rm maventree/htcondor-python-bindings-tutorials:stable jupyter lab
 ```
 Replace `stable` with `dev` if you want the development series release.
 After Docker pulls the image and starts it, you should see something like
