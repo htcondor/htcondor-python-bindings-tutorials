@@ -30,7 +30,7 @@ RUN apt-get update \
 COPY docker/condor_config.local /etc/condor/condor_config.local
 RUN pip install --no-cache-dir htcondor==${HTCONDOR_VERSION}
 
-COPY /tutorials ${HOME}
+COPY /tutorials ${HOME}/tutorials
 COPY docker/entrypoint.sh /entrypoint.sh
 RUN chown -R ${NB_UID} ${HOME}
 
