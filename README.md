@@ -49,7 +49,7 @@ Run the `local.sh` script, which builds and runs the Docker image and container:
 
 ```bash
 $ chmod +x docker/local.sh  # you only need to do this once
-$ docker/local.sh
+$ binder/local.sh
 ```
 
 You'll see the output of the Docker image build, then the container will spin up and you'll see a message like
@@ -64,7 +64,7 @@ You'll see the output of the Docker image build, then the container will spin up
 ```
 
 Paste one URL options into your web browser and you'll be in a Jupyter Lab.
-Use the file browser to open `tutorials/index.ipynb`.
+Use the Jupyter Lab file browser to open `index.ipynb`.
 
 
 ### Run on Bare Metal
