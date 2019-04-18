@@ -38,3 +38,4 @@ RUN pip install --no-cache-dir htcondor==${HTCONDOR_VERSION}.* nbstripout \
 USER ${NB_USER}
 WORKDIR ${HOME}/tutorials
 ENTRYPOINT ["/home/jovyan/.entrypoint.sh"]
+CMD ["jupyter", "lab"]
