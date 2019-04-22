@@ -62,8 +62,18 @@ Use the Jupyter Lab file browser to open `index.ipynb`.
 
 ### Run on Bare Metal
 
-Install HTCondor on your computer.
+Install your preferred version of HTCondor on your computer (https://research.cs.wisc.edu/htcondor/downloads/).
 
 Clone the repository as above.
 
-Install JupyterLab:
+Install JupyterLab and the matching version of the Python bindings into your Python using `pip`:
+```bash
+$ pip install jupyterlab htcondor==<x.y>
+```
+where `<x.y>` is something like `8.8`.
+
+Run JupyterLab from the repository root:
+```bash
+$ jupyter lab
+```
+and use your web browser to access the JupterLab and open `index.ipynb` as above.
