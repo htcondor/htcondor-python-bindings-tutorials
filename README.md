@@ -28,8 +28,9 @@ After Docker pulls the image and starts it, you should see something like
     Or copy and paste one of these URLs:
         http://(sdfa0sjgk01k or 127.0.0.1):8888/?token=sidfj12312ejr01039ir4029f0qr34i0284utfr9ja909fi2
 ```
-Paste one URL options into your web browser and you'll be in a Jupyter Lab.
+Paste one of the URL options into your web browser and you'll be in a Jupyter Lab.
 Use the file browser to open `index.ipynb`.
+
 
 ### Run in a Docker Container (From a Local Repository)
 
@@ -47,17 +48,8 @@ Run the `local.sh` script, which builds and runs the Docker image and container:
 $ chmod +x docker/local.sh  # you only need to do this once
 $ binder/local.sh
 ```
-You'll see the output of the Docker image build, then the container will spin up and you'll see a message like
-```
-[C 18:06:44.844 LabApp]
-
-    To access the notebook, open this file in a browser:
-        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-1-open.html
-    Or copy and paste one of these URLs:
-        http://(sdfa0sjgk01k or 127.0.0.1):8888/?token=sidfj12312ejr01039ir4029f0qr34i0284utfr9ja909fi2
-```
-Paste one URL options into your web browser and you'll be in a Jupyter Lab.
-Use the Jupyter Lab file browser to open `index.ipynb`.
+You'll see the output of the Docker image build, then the container will spin up and you'll see a message like above.
+Use it to connect to the Jupyter Lab and open `index.ipynb`.
 
 
 ### Run on Bare Metal
@@ -76,4 +68,4 @@ Run JupyterLab from the repository root:
 ```bash
 $ jupyter lab
 ```
-and use your web browser to access the JupterLab and open `index.ipynb` as above.
+and use your web browser to access the Jupyter Lab and open `index.ipynb` as above.
