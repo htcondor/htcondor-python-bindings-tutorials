@@ -18,7 +18,7 @@ The most convenient way to edit the tutorials is to clone the repository and the
 run the `binder/dev.sh` script from the repository root.
 ```bash
 $ chmod +x docker/dev.sh
-$ binder/dev.sh
+$ binder/edit.sh
 ```
 This will open the same Jupyter Lab environment as if you were doing the tutorials,
 except that everything in `tutorials/` is bind-mounted back to the host.
