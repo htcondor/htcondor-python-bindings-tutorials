@@ -10,7 +10,7 @@ If you want the tutorials based on the **development** series (`8.9.x`), use [![
 
 ## Other Ways to Access the Tutorials
 
-If Binder isn't working, there are two (worse) ways to get the tutorials.
+If Binder isn't working, there are three (worse) ways to get the tutorials.
 
 ### Run in a Docker Container
 
