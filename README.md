@@ -8,6 +8,8 @@ The easiest way to get started is to launch the tutorials via Binder:
 The Binder link above is for the version of the tutorials based on the **stable** series release of HTCondor, currently `8.8.x`.
 If you want the tutorials based on the **development** series (`8.9.x`), use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/htcondor/htcondor-python-bindings-tutorials/dev?urlpath=lab/tree/index.ipynb).
 
+If you are a maintainer, see the `MAINTENANCE.md` file for instructions.
+
 ## Other Ways to Access the Tutorials
 
 If Binder isn't working, there are three (worse) ways to get the tutorials.
