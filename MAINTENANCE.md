@@ -31,9 +31,10 @@ Your choice...
 
 ## Synchronization with the Manual
 
-The HTCondor Manual contains rendered, pre-run versions of these notebooks.
+The HTCondor Manual is rendered from pre-run versions of these notebooks.
 Whenever you make an update to the content of the tutorials here, you should
 
+1. Start the tutorial notebooks up using `binder/edit.sh` (see below).
 1. Clear the notebook's output and restart the kernel (from the "Kernel" menu bar).
 1. Run the entire notebook through, in order, once. Note that some cells may raise exceptions; you must manually continue execution past them.
 1. Copy the resulting `.ipnyb` file (which now contains the output cells) into the appropriate place under `docs/apis/python-bindings` in the main HTCondor repository.
@@ -41,7 +42,7 @@ Whenever you make an update to the content of the tutorials here, you should
 ## Local Development
 
 The most convenient way to edit the tutorials is to clone the repository and then
-run the `binder/dev.sh` script from the repository root.
+run the `binder/edit.sh` script from the repository root.
 ```bash
 $ chmod +x binder/edit.sh
 $ binder/edit.sh
