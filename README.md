@@ -12,13 +12,13 @@ If you are a maintainer, see the `MAINTENANCE.md` file for instructions.
 
 ## Other Ways to Access the Tutorials
 
-If Binder isn't working, there are three (worse) ways to get the tutorials.
+If Binder isn't working, there are three other ways to get the tutorials.
 
 ### Run in a Docker Container
 
 You can run the same Docker container used by Binder locally by running
 ```bash
-docker run --rm htcondor/python-bindings-tutorials:stable
+docker run -p 8888:8888 htcondor/python-bindings-tutorials:stable
 ```
 Replace `stable` with `dev` if you want the development series release.
 After Docker pulls the image and starts it, you should see something like
