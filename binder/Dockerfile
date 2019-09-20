@@ -19,7 +19,7 @@ ARG HTCONDOR_VERSION=8.8
 USER root
 
 RUN apt-get update \
- && apt-get -y install --no-install-recommends gnupg git  \
+ && apt-get -y install --no-install-recommends gnupg git vim less \
  && wget -qO - https://research.cs.wisc.edu/htcondor/ubuntu/HTCondor-Release.gpg.key | apt-key add - \
  && echo "deb  http://research.cs.wisc.edu/htcondor/ubuntu/${HTCONDOR_VERSION}/bionic bionic contrib" >> /etc/apt/sources.list \
  && apt-get -y update \
