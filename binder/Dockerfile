@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM jupyter/minimal-notebook:7d427e7a4dde
+FROM jupyter/minimal-notebook:latest
 ARG HTCONDOR_VERSION=8.8
 
 USER root
