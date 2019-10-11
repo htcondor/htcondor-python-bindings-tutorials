@@ -20,5 +20,7 @@ USER ${NB_USER}
 
 # copy the tutorial notebooks into the container
 COPY --chown=jovyan:0 tutorials ${HOME}/tutorials
+RUN pip install --no-cache-dir nbstripout \
+ && nbstripout ${HOME}/tutorials/**/*
 
 WORKDIR ${HOME}/tutorials
