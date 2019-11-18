@@ -19,7 +19,6 @@ You can run the same Docker container used by Binder locally by running
 ```bash
 docker run -p 8888:8888 htcondor/python-bindings-tutorials:latest
 ```
-Replace `stable` with `dev` if you want the development series release.
 After Docker pulls the image and starts it, you should see something like
 ```
 [C 14:21:29.540 NotebookApp]
