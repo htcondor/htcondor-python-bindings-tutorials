@@ -3,35 +3,35 @@
 This repository contains various tutorials on using the HTCondor Python Bindings.
 
 The easiest way to get started is to launch the tutorials via Binder: 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/htcondor/htcondor-python-bindings-tutorials/stable?urlpath=lab/tree/index.ipynb)
-
-The Binder link above is for the version of the tutorials based on the **stable** series release of HTCondor, currently `8.8.x`.
-If you want the tutorials based on the **development** series (`8.9.x`), use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/htcondor/htcondor-python-bindings-tutorials/dev?urlpath=lab/tree/index.ipynb).
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/htcondor/htcondor-python-bindings-tutorials/master?urlpath=lab/tree/index.ipynb)
 
 If you are a maintainer, see the `MAINTENANCE.md` file for instructions.
+
 
 ## Other Ways to Access the Tutorials
 
 If Binder isn't working, there are three other ways to get the tutorials.
 
+
 ### Run in a Docker Container
 
 You can run the same Docker container used by Binder locally by running
 ```bash
-docker run -p 8888:8888 htcondor/python-bindings-tutorials:stable
+docker run -p 8888:8888 htcondor/python-bindings-tutorials:latest
 ```
-Replace `stable` with `dev` if you want the development series release.
 After Docker pulls the image and starts it, you should see something like
 ```
-[C 18:06:44.844 LabApp]
+[C 14:21:29.540 NotebookApp]
 
     To access the notebook, open this file in a browser:
-        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-1-open.html
+        file:///home/jovyan/.local/share/jupyter/runtime/nbserver-6-open.html
     Or copy and paste one of these URLs:
-        http://(sdfa0sjgk01k or 127.0.0.1):8888/?token=sidfj12312ejr01039ir4029f0qr34i0284utfr9ja909fi2
+        http://42c775a17c65:8888/?token=0cd84e557c1b497e971461df1e28309fa045a5086a05c344
+     or http://127.0.0.1:8888/?token=0cd84e557c1b497e971461df1e28309fa045a5086a05c344
 ```
-Paste one of the URL options into your web browser and you'll be in a Jupyter Lab.
-Use the file browser to open `index.ipynb`.
+Paste one of the URL options into your web browser and you'll be in a Jupyter Lab
+(the file method will not work, you must use one of the links).
+Use the file browser on the left side of the Lab interface to open `index.ipynb`.
 
 
 ### Run in a Docker Container (From a Local Repository)
@@ -43,11 +43,9 @@ Clone the repository:
 ```bash
 $ git clone https://github.com/htcondor/htcondor-python-bindings-tutorials
 ```
-(The default is the stable series; `git checkout dev` to switch to development after cloning.)
 
-Run the `run.sh` script, which builds and runs the Docker image and container:
+Run the `run.sh` script (or `run.cmd` on Windows), which builds and runs the Docker image and container:
 ```bash
-$ chmod +x binder/run.sh  # you only need to do this once
 $ binder/run.sh
 ```
 You'll see the output of the Docker image build, then the container will spin up and you'll see a message like above.
@@ -64,7 +62,7 @@ Install JupyterLab and the matching version of the Python bindings into your Pyt
 ```bash
 $ pip install jupyterlab htcondor==<x.y>
 ```
-where `<x.y>` is something like `8.8`.
+where `<x.y>` is something like `8.9`.
 
 Run JupyterLab from the repository root:
 ```bash
