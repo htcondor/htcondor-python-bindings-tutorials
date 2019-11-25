@@ -33,7 +33,7 @@ Whenever you make an update to the content of the tutorials here, you should
 ## Local Development
 
 The most convenient way to edit the tutorials is to clone the repository and then
-run the `binder/edit.sh` script from the repository root.
+run the `binder/edit.sh` (or `binder/edit.cmd` on Windows) script from the repository root.
 This will open the same Jupyter Lab environment as if you were doing the tutorials,
 except that everything in `tutorials/` is bind-mounted back to the host.
 Any changes you make in the container will be reflected on your computer in the repository,

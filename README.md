@@ -44,9 +44,8 @@ Clone the repository:
 $ git clone https://github.com/htcondor/htcondor-python-bindings-tutorials
 ```
 
-Run the `run.sh` script, which builds and runs the Docker image and container:
+Run the `run.sh` script (or `run.cmd` on Windows), which builds and runs the Docker image and container:
 ```bash
-$ chmod +x binder/run.sh  # you only need to do this once
 $ binder/run.sh
 ```
 You'll see the output of the Docker image build, then the container will spin up and you'll see a message like above.
