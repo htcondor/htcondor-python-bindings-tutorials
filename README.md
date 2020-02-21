@@ -13,11 +13,11 @@ If you are a maintainer, see the `MAINTENANCE.md` file for instructions.
 If Binder isn't working, there are three other ways to get the tutorials.
 
 
-### Run in a Docker Container
+### Run in a Docker Container (From DockerHub)
 
 You can run the same Docker container used by Binder locally by running
 ```bash
-docker run -p 8888:8888 htcondor/python-bindings-tutorials:latest
+docker run -it --rm -p 8888:8888 htcondor/python-bindings-tutorials:latest
 ```
 After Docker pulls the image and starts it, you should see something like
 ```
