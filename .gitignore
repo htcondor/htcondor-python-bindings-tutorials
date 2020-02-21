@@ -103,5 +103,11 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# editor config
 .vscode/
 .idea/
+
+# htcondor files
+.log
+.err
+.out

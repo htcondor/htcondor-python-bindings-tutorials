@@ -27,6 +27,7 @@ Whenever you make an update to the content of the tutorials here, you should
 1. Clear the notebook's output and restart the kernel (from the "Kernel" menu bar).
 1. Run the entire notebook through, in order, once. 
    Note that some cells may raise exceptions; you must manually continue execution past them.
+   Some cells may fail if you run them too quickly, because they need time for HTCondor jobs to run.
 1. Copy the resulting `.ipnyb` file (which now contains the output cells) into 
    the appropriate place under `docs/apis/python-bindings` in the main HTCondor repository.
 
