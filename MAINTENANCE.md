@@ -15,7 +15,9 @@ from the root of the repository to clean up the notebooks.
 (`pip install nbstripout` to get the necessary package).
 
 Alternatively, you can manually clear all of the output from the notebooks.
-Your choice...
+
+Note that even minor edits will often produce random changed bits of metadata in the `.ipynb` files
+that the above will not fix; this is currently unavoidable, so don't worry about it.
 
 ## Synchronization with the Manual
 
@@ -30,6 +32,8 @@ Whenever you make an update to the content of the tutorials here, you should
    Some cells may fail if you run them too quickly, because they need time for HTCondor jobs to run.
 1. Copy the resulting `.ipnyb` file (which now contains the output cells) into 
    the appropriate place under `docs/apis/python-bindings` in the main HTCondor repository.
+   You may also need to check for changed structure of the tutorials directory 
+   (this repository should be considered authoritative).
 
 ## Local Development
 
