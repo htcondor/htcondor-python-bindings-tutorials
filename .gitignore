@@ -108,6 +108,6 @@ venv.bak/
 .idea/
 
 # htcondor files
-.log
-.err
-.out
+*.log
+*.err
+*.out
