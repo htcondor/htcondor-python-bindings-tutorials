@@ -16,11 +16,17 @@
 FROM htcondor/htc-minimal-notebook:latest
 ENV NB_USER="jovyan"
 
+# switch to root to add a script for quickly finding all of the tutorial notebooks
+USER root
+RUN echo '#!/bin/bash\nfind ${HOME}/tutorials -name '\''*.ipynb'\'' -and -not -iname '\''*-checkpoint.ipynb'\''' > /usr/bin/find_notebooks \
+ && chmod +x /usr/bin/find_notebooks
 USER ${NB_USER}
 
-# copy the tutorial notebooks into the container
+# install extra packages for manipulating notebooks programatically
+RUN python -m pip install --no-cache-dir nbstripout nbconvert
+
+# copy the tutorial notebooks into the container and strip them
 COPY --chown=jovyan:0 tutorials ${HOME}/tutorials
-RUN python -m pip install --no-cache-dir nbstripout \
- && nbstripout ${HOME}/tutorials/**/*
+RUN find_notebooks | xargs nbstripout
 
 WORKDIR ${HOME}/tutorials
