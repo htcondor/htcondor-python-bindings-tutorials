@@ -36,7 +36,13 @@ Whenever you make an update to the content of the tutorials here, you should
 1. Execute all of the notebooks by running `binder/exec.sh`. This will create a
    Docker container with a bind mount back to the `tutorials/` directory and
    run all of the notebooks it finds there.
-1. Copy the resulting `.ipnyb` files (which now contains the output cells) into 
+1. Check the output of `binder/exec.sh` carefully, looking for execution errors that
+   prevent notebooks from being executed and written back to disk.
+1. Open the notebooks themselves and check that their output looks correct.
+   Look for cells that have raised exceptions in particular: some are intentional,
+   but errors may have crept in.
+1. Once you are satisfied that the output is correct, copy the resulting `.ipnyb` 
+   files (which now contains the output cells) into 
    the appropriate place under `docs/apis/python-bindings` in the main HTCondor repository.
    You may also need to check for changed structure of the tutorials directory 
    (the contents and structure of this repository should be considered authoritative).
