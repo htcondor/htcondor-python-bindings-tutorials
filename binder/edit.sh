@@ -2,7 +2,7 @@
 
 set -e
 
-CONTAINER_TAG=htmap-binder-edit
+CONTAINER_TAG=htcondor-python-bindings-tutorials
 
 echo "Building HTCondor Tutorials Binder container..."
 

@@ -1,8 +1,8 @@
 @echo off
 
-SET CONTAINER_TAG=htmap-binder-run
+SET CONTAINER_TAG=htcondor-python-bindings-tutorials
 
-ECHO Building HTCondor Tutorials Binder container...
+echo "Building HTCondor Python Bindings Tutorials container..."
 
 docker build -t %CONTAINER_TAG% --file binder/Dockerfile .
 
