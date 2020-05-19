@@ -112,4 +112,7 @@ venv.bak/
 *.err
 *.out
 
+# job cruft
+*.txt
 tutorials/users/inputs/
+tutorials/introductory/input_directory/
