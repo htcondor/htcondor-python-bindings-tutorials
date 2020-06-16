@@ -17,7 +17,7 @@ FROM htcondor/htc-minimal-notebook:latest
 
 # switch to root to add a script for quickly finding all of the tutorial notebooks
 USER root
-RUN echo '#!/bin/bash\nfind ${HOME}/tutorials -name '\''*.ipynb'\'' -and -not -iname '\''*-checkpoint.ipynb'\''' > /usr/bin/find_notebooks \
+RUN echo -e '#!/bin/bash\nfind ${HOME}/tutorials -name '\''*.ipynb'\'' -and -not -iname '\''*-checkpoint.ipynb'\''' > /usr/bin/find_notebooks \
  && chmod +x /usr/bin/find_notebooks
 
 USER ${NB_UID}:${NB_GID}
