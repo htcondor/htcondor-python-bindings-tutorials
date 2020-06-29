@@ -42,7 +42,7 @@ Whenever you make an update to the content of the tutorials here, you should
    Look for cells that have raised exceptions in particular: some are intentional,
    but errors may have crept in.
 1. Once you are satisfied that the output is correct, 
-   copy all of the resulting `.ipnyb` 
+   copy all of the resulting `.ipynb` 
    files (which now contain rendered output cells) into 
    the appropriate place under `docs/apis/python-bindings/tutorials` 
    in the main HTCondor repository.
