@@ -41,8 +41,8 @@ Whenever you make an update to the content of the tutorials here, you should
 1. Open the notebooks themselves and check that their output looks correct.
    Look for cells that have raised exceptions in particular: some are intentional,
    but errors may have crept in.
-1. Once you are satisfied that the output is correct, copy the resulting `.ipynb` 
-   files (which now contains the output cells) into 
-   the appropriate place under `docs/apis/python-bindings` in the main HTCondor repository.
-   You may also need to check for changed structure of the tutorials directory 
-   (the contents and structure of this repository should be considered authoritative).
+1. Once you are satisfied that the output is correct, 
+   copy all of the resulting `.ipynb` 
+   files (which now contain rendered output cells) into 
+   the appropriate place under `docs/apis/python-bindings/tutorials` 
+   in the main HTCondor repository.
