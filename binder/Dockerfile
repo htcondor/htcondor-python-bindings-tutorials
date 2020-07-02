@@ -20,10 +20,17 @@ USER root
 RUN echo -e '#!/bin/bash\nfind ${HOME}/tutorials -name '\''*.ipynb'\'' -and -not -iname '\''*-checkpoint.ipynb'\''' > /usr/bin/find_notebooks \
  && chmod +x /usr/bin/find_notebooks
 
+RUN : \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends imagemagick graphviz \
+ && apt-get -y clean \
+ && rm -rf /var/lib/apt/lists/* \
+ && :
+
 USER ${NB_UID}:${NB_GID}
 
 # install extra packages for manipulating notebooks programatically
-RUN python -m pip install --no-cache-dir nbstripout nbconvert
+RUN python -m pip install --no-cache-dir nbstripout nbconvert graphviz
 
 # copy the tutorial notebooks into the container and strip them
 COPY --chown=1000:100 tutorials ${HOME}/tutorials
