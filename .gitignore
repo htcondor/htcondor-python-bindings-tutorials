@@ -114,5 +114,8 @@ venv.bak/
 
 # job cruft
 *.txt
-tutorials/users/inputs/
-tutorials/introductory/input_directory/
+*.png
+*.ppm
+tutorials/inputs/
+tutorials/input_directory/
+tutorials/mandelbrot-dag/
