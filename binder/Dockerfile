@@ -30,3 +30,6 @@ COPY --chown=1000:100 tutorials ${HOME}/tutorials
 RUN find_notebooks | xargs nbstripout
 
 WORKDIR ${HOME}/tutorials
+
+# install HTCondor Python bindings pre-release, when necessary
+RUN python -m pip install --no-cache-dir --upgrade htcondor==8.9.8a2
