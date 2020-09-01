@@ -4,7 +4,7 @@ set -e
 
 CONTAINER_TAG=htcondor-python-bindings-tutorials
 
-echo "Building HTCondor Tutorials Binder container..."
+echo "Building HTCondor Python Bindings Tutorials container..."
 
 docker pull htcondor/htc-minimal-notebook:latest
 docker build -t ${CONTAINER_TAG} --file binder/Dockerfile .
