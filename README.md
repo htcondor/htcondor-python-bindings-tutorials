@@ -28,8 +28,8 @@ After Docker pulls the image and starts it, you should see something like
     To access the notebook, open this file in a browser:
         file:///home/jovyan/.local/share/jupyter/runtime/nbserver-6-open.html
     Or copy and paste one of these URLs:
-        http://42c775a17c65:8888/?token=0cd84e557c1b497e971461df1e28309fa045a5086a05c344
-     or http://127.0.0.1:8888/?token=0cd84e557c1b497e971461df1e28309fa045a5086a05c344
+        http://012def98:8888/?token=a1b2c3d4...
+     or http://127.0.0.1:8888/?token=a1b2c3d4...
 ```
 Paste one of the URL options into your web browser and you'll be in a Jupyter Lab
 (the file method will not work, you must use one of the links).
