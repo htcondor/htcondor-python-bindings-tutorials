@@ -39,4 +39,4 @@ RUN find_notebooks | xargs nbstripout
 WORKDIR ${HOME}/tutorials
 
 # install HTCondor Python bindings pre-release, when necessary
-RUN python -m pip install --no-cache-dir --upgrade htcondor==9.1.3
+RUN python -m pip install --no-cache-dir --upgrade htcondor==10.7.0
