@@ -8,6 +8,6 @@ echo "Building HTCondor Python Bindings Tutorials container..."
 
 docker pull htcondor/htc-minimal-notebook:latest
 docker build -t ${CONTAINER_TAG} --file binder/Dockerfile .
-chmod o+w tutorials tutorials/* tutorials/*.ipynb
+chmod o+w tutorials tutorials/*.ipynb
 docker run -it --rm -p 8888:8888 --mount type=bind,source="$(pwd)"/tutorials,target=/home/jovyan/tutorials ${CONTAINER_TAG} $@
-chmod o-w tutorials tutorials/* tutorials/*.ipynb
+chmod o-w tutorials tutorials/*.ipynb
